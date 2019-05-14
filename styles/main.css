@@ -1,0 +1,28 @@
+.modal-info {
+	margin-left: 4%;
+	margin-top: 4%;
+}
+
+.horas-result {
+	margin-right: 7%;
+}
+
+html {
+	overflow-y: hidden; // hide vertical
+	overflow-x: hidden; // hide horizontal
+}
+
+.center-div {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.icone-about {
+	position: absolute;
+}
+
+.about_content_inner{
+		width: 100%;
+}

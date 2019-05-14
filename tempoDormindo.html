@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-gb">
+
+<head>
+  <title>Time-Watching</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+	  <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+
+	  <meta name="viewport" content="width=device-width" />
+	  <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+	  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <style>
+	button {
+		font-family: arial;
+		font-size:14px;
+		text-transform: uppercase;
+		font-weight:700;
+		border:none;
+		padding:10px;
+		cursor: pointer;
+		display:inline-block;
+		text-decoration: none;
+		background:orangered;
+		color:#fff;
+		box-shadow:0 5px 0 orangered;
+	}
+  </style>
+  <script type="text/javascript">
+        function habilitaBtn () {
+            var op1 = document.getElementByName("entrada").value;
+            var op2 = document.getElementByName("numTemporadas").value;
+            var op3 = document.getElementByName("numEpisodios").value;
+            var op4 = document.getElementByName("tempoEpisodio").value;
+          if(op1!=null&&op2!=null&&op3!=null&&op4!=null)
+            {
+                if(!document.getElementByName('Botao').disabled) document.getElementById('Botao').disabled=true;              
+            }
+        }
+    </script>
+  </head>
+
+<body>
+  <div class="container  container--small">	
+    <br>
+	<a href = "index.html"><img src="images/logo.png" alt="some text" width="100" height="60" align="left"></a>
+	<br><br>
+   <div class="container__top__hours-wasted">
+          <div class="hours-wasted__days">
+            <span class="numbers" id="days">00</span>
+            <span class="description">Dias</span>
+          </div>
+          <div class="hours-wasted__hours">
+            <span class="numbers" id="hours">00</span>
+            <span class="description">Horas</span>
+          </div>
+          <div class="hours-wasted__minutes">
+            <span class="numbers" id="minutes">00</span>
+            <span class="description">Minutos</span>
+          </div>
+    </div>
+	<div align = "center">
+			<div class="">
+            <span class="numbers" id="nome">?</span>
+            <span class="description">Nome da série: </span>
+          </div>
+	<div>
+	<br><br><br><br>
+	<a href = "resultado.html"><button class="btn" name = "Botao">Voltar</button></a>
+	</div>
+    <ul class="container__list-of-shows"></ul>
+  </div>
+
+  <div class="about">
+    <a href="#" class="about__icon  btn  icon-question  js-show-modal" title="About Tiii.me (Esc)"></a>
+
+    <div class="about__content  hide">
+      <a href="#" tabindex="-1" class="about__icon  btn icon-close  visuallyhidden  js-hide-modal" title="Close this window (Esc)"></a>
+
+      <div class="about_content_inner">
+        <h2>Calcule quanto tempo aproximadamente você gastaria com uma determinada série</h2>
+        <h3>Desgin e código por <a href="https/" tabindex="-1">Maria Verônica</a> e  <a href="https/" tabindex="-1">Sunimar</a>.</h3>
+        <p>Acesse esse projeto no  <a href="https://github.com/" rel="nofollow" tabindex="-1">GitHub</a>.</p><br/>
+        <small>Como funiona: coloque o nome da série, número de temporadas, número de episódios, e duração aproximada de cada episódio</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adds TV show background image to site -->
+  <span class="bg"></span>
+
+  <!-- JS scripts -->
+  <script src="scripts/app.min.js"></script>
+  <script src="scripts/resultadoDormindo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-gb">
+	<head>
+	  <title>Time-Watching</title>
+	  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+	  <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+
+	  <meta name="viewport" content="width=device-width" />
+	  <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+	  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+	  <style>
+		button {
+			font-family: arial;
+			font-size:14px;
+			text-transform: uppercase;
+			font-weight:700;
+			border:none;
+			padding:10px;
+			cursor: pointer;
+			display:inline-block;
+			text-decoration: none;
+			background: orangered;
+			color:#fff;
+			box-shadow:0 5px 0 orangered;
+		}
+	  </style>
+	  </head>
+	<body onload="FocusOnInput();">
+	  <div class="container  container--small">
+	  <br>
+		<a href = "index.html"><img src="images/logo.png" alt="some text" width="100" height="60" align="left"></a>
+		<br><br>
+
+		<form class="container__inputs  cf" action="#" onSubmit="return enviardados(event);">
+			<input type="text" name = "entrada" placeholder="Nome da série" title="Nome série" autofocus onSubmit="return enviardados();"/>
+			<input type="text" name = "numTemporadas" placeholder="Quantidade de Temporadas" title="Número de temporadas existentes na série" />
+			<input type="text" name = "numEpisodios" placeholder="Episódios por Temporada"  title = "Número de episódios presentes em cada temporada da série"/>
+			<input type="text" name = "tempoEpisodio" placeholder="Tempo por Episódio" title = "Tempo médio de duração dos episódios da série" />
+			<br><br><br><br><br><br><br><br><br>
+		<!--<a href = "resultado.html"><button class="btn" name = "Botao">Gerar Resultado</button></a>		<button class="btn" name = "Botao" onclick="goToResult()">Gerar Resultado</button>-->
+			<button class="btn" name = "Botao">Gerar Resultado</button>
+		</form>
+		<ul class="container__list-of-shows"></ul>
+	  </div>
+
+	  <div class="about">
+			<a href="#" class="about__icon icone-about icon-question  js-show-modal" title="About Tiii.me (Esc)"></a>
+			<div class="about__content  hide modal">
+			  <a href="#" tabindex="-1" class="about__icon icone-about btn icon-close  visuallyhidden  js-hide-modal" title="Fechar essa janela (Esc)"></a>
+
+			  <div class="about_content_inner">
+					<div class="center-div">
+						<h2>Calcule quanto tempo aproximadamente você gastaria com uma determinada série</h2>
+						<h3>Desgin e código por <a href="https/" tabindex="-1">Maria Verônica</a> e  <a href="https/" tabindex="-1">Sunimar</a>.</h3>
+						<p>Acesse esse projeto no  <a href="https://github.com/mveronicasoares/time-watching" tabindex="-1">GitHub</a>.</p><br/>
+						<small>Como funiona: coloque o nome da série, número de temporadas, número de episódios, e duração aproximada de cada episódio</small>
+					</div>
+				</div>
+			</div>
+	  </div>
+
+	  <!-- Adds TV show background image to site -->
+	  <span class="bg"></span>
+
+		<!-- JS scripts -->
+
+	  <script src="https://code.jquery.com/jquery-git.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script src="scripts/app.min.js"></script>
+		<script src="scripts/script.js"></script>
+	</body>
+</html>
