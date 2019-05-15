@@ -8,8 +8,8 @@
 }
 
 html {
-	overflow-y: hidden; // hide vertical
-	overflow-x: hidden; // hide horizontal
+	overflow-y: auto; /*hide vertical*/
+	overflow-x: hidden; /*hide horizontal*/
 }
 
 .center-div {
@@ -25,4 +25,48 @@ html {
 
 .about_content_inner{
 		width: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+.input-texto-inicial{
+    font-size: 3em;
+}
+
+.tempo-dormindo-div{
+	width: 100%;
+	align-items: center;
+}
+
+.tempo-dormindo-div div{
+	display: inline-block;
+}
+
+#tempoLivre {
+	width: 100%;
+	text-align: center;
+}
+
+#texto-atividade {
+	font-size: 1.5em !important;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.checkbox-atividade{
+	float: none;
+	width: auto;
+	height: auto;
+	-ms-transform: scale(1.5); /* IE */
+	-moz-transform: scale(1.5); /* FF */
+	-webkit-transform: scale(1.5); /* Safari and Chrome */
+	-o-transform: scale(1.5); /* Opera */
+	transform: scale(1.5);
+	padding: 10px;
+}
+
+.checkboxes label{
+	font-size: 1.2em;
+	margin-left: 1%;
 }

@@ -1771,10 +1771,8 @@ input {
     font-weight: 200;
     font-family: "Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, sans-serif;
     color: #f27a45;
-    font-size: 3em;
     outline: 0;
     box-shadow: none;
-    -webkit-appearance: none;
     border-radius: 0;
     border: none;
     background: 0 0;
@@ -1897,7 +1895,6 @@ input:focus::-webkit-input-placeholder {
     font-size: 5em;
     text-decoration: none!important;
     outline: 0;
-    -webkit-appearance: none;
     border: none;
     background: transparent!important;
     -moz-transition: all .2s ease-in-out;
@@ -1919,7 +1916,6 @@ input:focus::-webkit-input-placeholder {
 }
 
 input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
     width: 30%;
     height: 100%;
     font-family: "Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, sans-serif;

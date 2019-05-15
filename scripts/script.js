@@ -1,3 +1,9 @@
+$(document).ready(function(){
+	$("#numTemporadas").mask("#");
+	$("#numEpisodios").mask("#");
+	$("#tempoEpisodio").mask("#");
+});
+
 function habilitaBtn () {
 	var op1 = document.getElementByName("entrada").value;
 	var op2 = document.getElementByName("numTemporadas").value;
@@ -13,23 +19,23 @@ function habilitaBtn () {
 		event.preventDefault();
 		if( document.getElementsByName('entrada')[0].value=="" ||   document.getElementsByName('entrada')[0].value == undefined || document.getElementsByName('entrada')[0].value.length < 2)
 		{
-			alert( "Preencha campo \"Nome da Série\" corretamente! Não deixe valores em branco" );
+			alert( "Preencha campo \"Nome da Série\" corretamente! Não deixe valores em branco e nem menos do que 2 letras" );
 			document.getElementsByName('entrada')[0].focus();
 			return false;
 		}
 		else if(document.getElementsByName('numTemporadas')[0].value=="" || document.getElementsByName('numTemporadas')[0].value == undefined || document.getElementsByName('numTemporadas')[0].value.length < 1)
 		{
-			alert( "Preencha campo\"Quantidade de Temporadas\" corretamente! Não deixe valores em branco" );
+			alert( "Preencha campo\"Quantidade de Temporadas\" corretamente!" );
 			document.getElementsByName('numTemporadas')[0].focus();
 			return false;
 		}else if(document.getElementsByName('numEpisodios')[0].value=="" || document.getElementsByName('numEpisodios')[0].value == undefined || document.getElementsByName('numEpisodios')[0].value.length < 1)
 		{
-			alert( "Preencha campo \"Episódios por Temporada\" corretamente! Não deixe valores em branco" );
+			alert( "Preencha campo \"Episódios por Temporada\" corretamente!" );
 			document.getElementsByName('numEpisodios')[0].focus();
 			return false;
 		}else if(document.getElementsByName('tempoEpisodio')[0].value=="" || document.getElementsByName('tempoEpisodio')[0].value == undefined || document.getElementsByName('tempoEpisodio')[0].value.length < 1)
 		{
-			alert( "Preencha campo \"Tempo por Episódio\" corretamente! Não deixe valores em branco" );
+			alert( "Preencha campo \"Tempo por Episódio\" corretamente!" );
 			document.getElementsByName('tempoEpisodio')[0].focus();
 			return false;
 		} else {

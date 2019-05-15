@@ -2,96 +2,139 @@
 <html lang="en-gb">
 
 <head>
-  <title>Time-Watching</title>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-	  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-	  <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+    <title>Time-Watching</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
 
-	  <meta name="viewport" content="width=device-width" />
-	  <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
-	  <link rel="stylesheet" type="text/css" href="styles/main.css" />
-  <style>
-	button {
-		font-family: arial;
-		font-size:14px;
-		text-transform: uppercase;
-		font-weight:700;
-		border:none;
-		padding:10px;
-		cursor: pointer;
-		display:inline-block;
-		text-decoration: none;
-		background: orangered;
-		color:#fff;
-	}
-  </style>
-  <script type="text/javascript">
-        function habilitaBtn () {
-            var op1 = document.getElementByName("entrada").value;
-			var op2 = document.getElementByName("numTemporadas").value;
-			var op3 = document.getElementByName("numEpisodios").value;
-			var op4 = document.getElementByName("tempoEpisodio").value;
-            if(op1!=null&&op2!=null&&op3!=null&&op4!=null)
-            {
-                if(!document.getElementByName('Botao').disabled) document.getElementById('Botao').disabled=true;              
-            }
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <style>
+        button {
+            font-family: arial;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            background: orangered;
+            color: #fff;
         }
-    </script>
-  </head>
+    </style>
+</head>
 
 <body>
-  <div class="container  container--small">	
-    <br>
-	<a href = "index.html"><img src="images/logo.png" alt="some text" width="100" height="60" align="left"></a>
-	<br><br>
-	<div align = "center">
-		<div class="">
-            <span class="numbers horas-result" id="caminhada">?</span>
-            <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma caminhada: </span>
-        </div>
-		<div class="">
-            <span class="numbers" id="natacao">?</span>
-            <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma natação: </span>
-        </div>
-		<div class="">
-            <span class="numbers" id="danca">?</span>
-            <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma danca: </span>
-        </div>
-		<div class="">
-            <span class="numbers" id="musculacao">?</span>
-            <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma musculacao: </span>
-        </div>
-		<div class="">
-            <span class="numbers" id="bike">?</span>
-            <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma bicicleta: </span>
-        </div>
-	<div>
-	<br><br><br><br>
-	<a href = "resultado.html"><button class="btn" name = "Botao">Voltar</button></a>
-	</div>
-    <ul class="container__list-of-shows"></ul>
-  </div>
+    <div class="container  container--small">
+        <br>
+        <a href="index.html"><img src="images/logo.png" alt="some text" width="100" height="60" align="left"></a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div align="center" id="checkboxes-div-container">
+            <p id="texto-atividade">MARQUE AS ATIVIDADES QUE VOCÊ PRATICA</p>
+            <div class="checkboxes">
+                <div>
+                    <input type="checkbox" class="checkbox-atividade" id="check-jogos" name="jogos">
+                    <label for="jogos">Jogos Eletrônicos</label>
+                </div>
 
-  <div class="about">
-    <a href="#" class="about__icon  btn  icon-question  js-show-modal" title="About Tiii.me (Esc)"></a>
+                <div>
+                    <input type="checkbox" class="checkbox-atividade" id="check-danca" name="danca">
+                    <label for="danca">Dançar</label>
+                </div>
 
-    <div class="about__content  hide">
-      <a href="#" tabindex="-1" class="about__icon  btn icon-close  visuallyhidden  js-hide-modal" title="Close this window (Esc)"></a>
+                <div>
+                    <input type="checkbox" class="checkbox-atividade" id="check-instrumento" name="instrumento">
+                    <label for="instrumento">Tocar Instrumento</label>
+                </div>
 
-      <div class="about_content_inner">
-        <h2>Calcule quanto tempo aproximadamente você gastaria com uma determinada série</h2>
-        <h3>Desgin e código por <a href="https/" tabindex="-1">Maria Verônica</a> e  <a href="https/" tabindex="-1">Sunimar</a>.</h3>
-        <p>Acesse esse projeto no  <a href="https://github.com/" rel="nofollow" tabindex="-1">GitHub</a>.</p><br/>
-        <small>Como funiona: coloque o nome da série, número de temporadas, número de episódios, e duração aproximada de cada episódio</small>
-      </div>
-    </div>
-  </div>
+                <div>
+                    <input type="checkbox" class="checkbox-atividade" id="check-esportes" name="esportes">
+                    <label for="esportes">Praticar Esportes</label>
+                </div>
 
-  <!-- Adds TV show background image to site -->
-  <span class="bg"></span>
+                <div>
+                    <input type="checkbox" class="checkbox-atividade" id="check-leitura" name="leitura">
+                    <label for="leitura">Leitura</label>
+                </div>
+            </div>
+            <div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="botao-result" class="btn" name="Botao">Gerar Resultado</button>
+                <a href="resultado.html">
+                    <button class="btn" name="Botao">Voltar a tela anterior</button>
+                </a>
+            </div>
+            <ul class="container__list-of-shows"></ul>
+        </div>
+        <div id="container-resultados" class="container container--small hidden">
+            <div align="center">
+                <div id="resultado-jogos">
+                    <span class="numbers" id="jogos-print">?</span>
+                    <span class="description">Quantidade de calorias que você gastaria nesse tempo em jogos eletrônicos: </span>
+                </div>
+                <div id="resultado-danca">
+                    <span class="numbers" id="danca-print">?</span>
+                    <span class="description">Quantidade de calorias que você gastaria nesse tempo em uma dança: </span>
+                </div>
+                <div id="resultado-instrumento">
+                    <span class="numbers" id="instrumento-print">?</span>
+                    <span class="description">Quantidade de calorias que você gastaria nesse tempo tocando um instrumento: </span>
+                </div>
+                <div id="resultado-esportes">
+                    <span class="numbers" id="esporte-print">?</span>
+                    <span class="description">Quantidade de calorias que você gastaria nesse tempo praticando esportes: </span>
+                </div>
+                <div id="resultado-leitura">
+                    <span class="numbers" id="leitura-print">?</span>
+                    <span class="description">Quantidade de calorias que você gastaria nesse tempo lendo algo: </span>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <a href="outrasAtividades.html">
+                        <button class="btn" name="Botao">Voltar a tela de atividades</button>
+                    </a>
+                    <br>
+                    <br>
 
-  <!-- JS scripts -->
-  <script src="scripts/app.min.js"></script>
-  <script src="scripts/outrasAtividades.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <a href="#" class="about__icon  btn  icon-question  js-show-modal" title="About Tiii.me (Esc)"></a>
+
+            <div class="about__content  hide">
+                <a href="#" tabindex="-1" class="about__icon  btn icon-close  visuallyhidden  js-hide-modal" title="Close this window (Esc)"></a>
+
+                <div class="about_content_inner">
+                    <h2>Calcule quanto tempo aproximadamente você gastaria com uma determinada série</h2>
+                    <h3>Desgin e código por <a href="https/" tabindex="-1">Maria Verônica</a> e  <a href="https/" tabindex="-1">Sunimar</a>.</h3>
+                    <p>Acesse esse projeto no <a href="https://github.com/" rel="nofollow" tabindex="-1">GitHub</a>.</p>
+                    <br/>
+                    <small>Como funiona: coloque o nome da série, número de temporadas, número de episódios, e duração aproximada de cada episódio</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adds TV show background image to site -->
+        <span class="bg"></span>
+
+        <!-- JS scripts -->
+        <script src="scripts/jquery-3.4.1.js"></script>
+        <script src="https://code.jquery.com/jquery-git.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="scripts/app.min.js"></script>
+        <script src="scripts/outrasAtividades.js"></script>
 </body>
+
 </html>

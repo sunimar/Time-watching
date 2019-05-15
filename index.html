@@ -10,19 +10,19 @@
 	  <link rel="stylesheet" type="text/css" href="styles/style.min.css" />
 	  <link rel="stylesheet" type="text/css" href="styles/main.css" />
 	  <style>
-		button {
-			font-family: arial;
-			font-size:14px;
-			text-transform: uppercase;
-			font-weight:700;
-			border:none;
-			padding:10px;
-			cursor: pointer;
-			display:inline-block;
-			text-decoration: none;
-			background: orangered;
-			color:#fff;
-		}
+			button {
+				font-family: arial;
+				font-size:14px;
+				text-transform: uppercase;
+				font-weight:700;
+				border:none;
+				padding:10px;
+				cursor: pointer;
+				display:inline-block;
+				text-decoration: none;
+				background: orangered;
+				color:#fff;
+			}
 	  </style>
 	  </head>
 	<body onload="FocusOnInput();">
@@ -32,10 +32,11 @@
 		<br><br>
 
 		<form class="container__inputs  cf" action="#" onSubmit="return enviardados(event);">
-			<input type="text" name = "entrada" placeholder="Nome da série" title="Nome série" autofocus onSubmit="return enviardados();"/>
-			<input type="text" name = "numTemporadas" placeholder="Quantidade de Temporadas" title="Número de temporadas existentes na série" />
-			<input type="text" name = "numEpisodios" placeholder="Episódios por Temporada"  title = "Número de episódios presentes em cada temporada da série"/>
-			<input type="text" name = "tempoEpisodio" placeholder="Tempo por Episódio" title = "Tempo médio de duração dos episódios da série" />
+			<br>
+			<input type="text" class="input-texto-inicial"  id="entrada" name = "entrada" placeholder="Nome da série" title="Nome série" autofocus onSubmit="return enviardados();"/>
+			<input type="text"  class="input-texto-inicial" id="numTemporadas" name = "numTemporadas" placeholder="Quantidade de Temporadas" title="Número de temporadas existentes na série" />
+			<input type="text"  class="input-texto-inicial" id="numEpisodios" name = "numEpisodios" placeholder="Episódios por Temporada"  title = "Número de episódios presentes em cada temporada da série"/>
+			<input type="text"  class="input-texto-inicial" id="tempoEpisodio" name = "tempoEpisodio" placeholder="Tempo por Episódio" title = "Tempo médio de duração dos episódios da série estimado em minutos" />
 			<br><br><br><br><br><br><br><br><br>
 		<!--<a href = "resultado.html"><button class="btn" name = "Botao">Gerar Resultado</button></a>		<button class="btn" name = "Botao" onclick="goToResult()">Gerar Resultado</button>-->
 			<button class="btn" name = "Botao">Gerar Resultado</button>
@@ -63,10 +64,13 @@
 	  <span class="bg"></span>
 
 		<!-- JS scripts -->
-
+		
+		<script src="scripts/jquery-3.4.1.js"></script>
+		
 	  <script src="https://code.jquery.com/jquery-git.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 		<script src="scripts/app.min.js"></script>
 		<script src="scripts/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 	</body>
 </html>

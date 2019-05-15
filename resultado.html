@@ -55,12 +55,14 @@
             <span class="description">Nome da série: </span>
           </div>
 	<div>
-	<br><br><br><br>
+	<br><br>
 	<a href = "tempoDormindo.html"><button class="btn" name = "Botao">Considerando Sono</button></a>
 	</div><div><br>
 	<a href = "outrasAtividades.html"><button class="btn" name = "Botao" >Outras Atividades</button></a>
 	</div><div><br>
-	<a href = "index.html"><button class="btn" name = "Botao">Voltar</button></a>
+	<a href = "tempoLivre.html"><button class="btn" name = "Botao"  onclick="tempoLivre()" >Considerando Tempo Livre</button></a>
+	</div><div><br>
+	<a href = "index.html"><button class="btn" name = "Botao">Voltar para tela inicial</button></a>
 	</div>
     <ul class="container__list-of-shows"></ul>
   </div>
@@ -83,7 +85,9 @@
   <!-- Adds TV show background image to site -->
   <span class="bg"></span>
 
-  <!-- JS scripts -->
+	<!-- JS scripts -->
+	<script src="https://code.jquery.com/jquery-git.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   <script src="scripts/app.min.js"></script>
   <script src="scripts/resultado.js"></script>
 </body>
