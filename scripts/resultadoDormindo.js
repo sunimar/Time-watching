@@ -4,6 +4,11 @@
 
 
 function carregaDormindo () {
+
+		var numTemp = localStorage.getItem("numTemp");
+		var numEps = localStorage.getItem("numEps");
+		var tempEps = localStorage.getItem("tempEps");
+
 	  var total = parseInt(localStorage.getItem("total"));
 	  var nome = localStorage.getItem("nome");
 	  var horas = parseInt(localStorage.getItem("horas"));
@@ -24,9 +29,13 @@ function carregaDormindo () {
     horas = parseInt(horas) < 10 ? ("0" + horas) : horas;
     minutos = parseInt(minutos) < 10 ? ("0" + minutos) : minutos
 
-	  document.getElementById('nome').innerHTML = nome;
+	document.getElementById('nome').innerHTML = nome;
     document.getElementById('days').innerHTML = dias;
     document.getElementById('hours').innerHTML = horas;
-    document.getElementById('minutes').innerHTML = Math.trunc(minutos);
+	document.getElementById('minutes').innerHTML = Math.trunc(minutos);
+	
+	document.getElementById('numTemp').innerHTML = numTemp;
+	document.getElementById('numEps').innerHTML = numEps;
+	document.getElementById('tempEps').innerHTML = tempEps;
 
 }

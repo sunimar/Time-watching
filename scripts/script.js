@@ -39,7 +39,7 @@ function habilitaBtn () {
 			document.getElementsByName('tempoEpisodio')[0].focus();
 			return false;
 		} else {
-			//alert( "Resultado gerado com sucesso!" );
+			
 			var cadeia = document.getElementsByName('entrada')[0].value;
 			var numTemporadas = document.getElementsByName('numTemporadas')[0].value;
 			var numEpisodios = document.getElementsByName('numEpisodios')[0].value;
@@ -56,6 +56,11 @@ function habilitaBtn () {
 			localStorage.setItem("horas",horas);
 			localStorage.setItem("minutos",minutos);
 			localStorage.setItem("total",total);
+
+			localStorage.setItem("numTemp", numTemporadas);
+			localStorage.setItem("numEps", numEpisodios);
+			localStorage.setItem("tempEps", tempoEpisodio);
+
 			window.location.href="resultado.html";
 		}
 	}
